@@ -1,0 +1,130 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  height: 100vh;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+.animate-slide {
+  animation: slide 1s ease;
+}
+
+@keyframes slide {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* =========================
+   PRODUCT CARDS (FRONT PAGE)
+========================= */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* FORCE product card image size */
+.card img {
+  height: 150px !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+/* =========================
+   PRODUCT DETAILS PAGE
+========================= */
+/* FORCE product detail image size */
+section img {
+  max-height: 220px !important;
+  width: 100% !important;
+  object-fit: contain !important;
+}
+
+/* Spacing improvement */
+section ul {
+  padding-left: 18px;
+}
+
+/* =========================
+   CART PAGE
+========================= */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   ADMIN DASHBOARD
+========================= */
+.sidebar {
+  width: 200px;
+  min-height: 100vh;
+  background-color: #212529;
+  color: white;
+}
+
+.sidebar .nav-link {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #343a40;
+}
+
+/* =========================
+   RESPONSIVENESS
+========================= */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+
+  .card img {
+    height: 140px !important;
+  }
+
+  section img {
+    max-height: 180px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .card img {
+    height: 130px !important;
+  }
+
+  section img {
+    max-height: 160px !important;
+  }
+}
